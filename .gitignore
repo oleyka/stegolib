@@ -1,4 +1,8 @@
 .cache
 .DS_Store
+.eggs
 *.pyc
+*.egg-info
+dist
+MANIFEST
 venv
