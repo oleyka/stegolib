@@ -2,14 +2,14 @@ VERSION=$(/usr/bin/env python setup.py --version)
 
 default: test
 
-setup:
+venv:
 	virtualenv venv
 	. venv/bin/activate  ## && pip install -r requirements.txt
 
-package: setup
+package: venv
 	@python setup.py sdist
 
-test: setup
+test: venv
 	@python setup.py pytest
 
 clean:
@@ -20,4 +20,4 @@ clean:
 	@rm -rf .tox .eggs
 	@rm -rf distribute-* *.egg *.egg-info
 
-.PHONY: default setup tox clean
+.PHONY: default package test clean

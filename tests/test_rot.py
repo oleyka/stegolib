@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from stegolib.main import *
 import pytest
+from stegolib.main import *
 
 
 class TestRotClass:
